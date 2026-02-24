@@ -1,6 +1,6 @@
 # LocalScribe
 
-> **Submission to the [MedGemma Impact Challenge](https://www.kaggle.com/competitions/med-gemma-impact-challenge/overview)**
+> **My submission to the [MedGemma Impact Challenge](https://www.kaggle.com/competitions/med-gemma-impact-challenge/overview)**
 
 LocalScribe is a fully on-device medical scribe for Android. It listens to doctor–patient conversations (or dictated notes), transcribes speech in real time, extracts clinical findings, and generates structured clinical notes — all without sending a single byte of patient data off the device.
 
@@ -20,7 +20,7 @@ The app runs two AI models in a pipeline, entirely on the phone:
 
 1. **MedASR** — Speech recognition model exported as split ONNX (mel extractor + ASR encoder). Audio is processed in ~5-second chunks with silence-boundary detection. A CTC beam search decoder produces multiple hypotheses per chunk, and uncertain words are flagged as beam candidates for downstream resolution by the ondevice LLM.
 
-2. **MedGemma 4B** — Google's medical LLM, quantised and run locally via [llama.rn](https://github.com/nicklausw/llama.rn). Each transcribed chunk is streamed to the LLM which:
+2. **MedGemma 4B** — Google's medical LLM, quantised and run locally via llama.rn. Each transcribed chunk is streamed to the LLM which:
    - Resolves beam search alternatives (picks the correct word from candidates)
    - Extracts symptoms with confirmation status (confirmed / denied / mentioned)
    - Extracts medications with confirmation status
