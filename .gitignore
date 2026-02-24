@@ -1,34 +1,30 @@
-# Gradle files
-.gradle/
-build/
+# Dependencies
+node_modules/
 
-# Local configuration file (sdk path, etc)
-local.properties
+# Build outputs
+android/app/build/
+android/.gradle/
+android/.cxx/
+android/.kotlin/
+android/app/src/main/assets/index.android.bundle
 
-# Log/OS Files
-*.log
+# Generated resource drawables from bundler
+android/app/src/main/res/drawable-mdpi/
+android/app/src/main/res/drawable-hdpi/
+android/app/src/main/res/drawable-xhdpi/
+android/app/src/main/res/drawable-xxhdpi/
+android/app/src/main/res/drawable-xxxhdpi/
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
+# IDE / Editor
+.cursor/
+.vscode/
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+*.iml
 
-# Keystore files
-*.jks
-*.keystore
+# OS
+.DS_Store
+Thumbs.db
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+# Temporary
+*.log
+*.tmp
